@@ -4,6 +4,8 @@ services:
   postgres:
     image: postgres:15-alpine
     container_name: vertex-postgres
+      # Default credentials for LOCAL DEVELOPMENT only
+      # DO NOT use these in production
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres

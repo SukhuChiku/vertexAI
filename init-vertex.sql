@@ -1,5 +1,5 @@
 -- Create vertex user
-CREATE USER vertex WITH PASSWORD 'vertex_password' SUPERUSER;
+CREATE USER vertex WITH PASSWORD 'your_vertex_password' SUPERUSER;
 
 -- Create databases
 CREATE DATABASE vertex_inventory OWNER vertex;
