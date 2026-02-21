@@ -6,7 +6,6 @@ An intelligent inventory management system using Claude AI and Model Context Pro
 
 - 🤖 **AI-Powered Chat Interface** - Natural language queries for inventory data
 - 📊 **Real-Time Monitoring** - Autonomous alerts for low stock items
-- 🔧 **Multi-Agent Architecture** - Specialized agents for inventory, forecasting, and analysis
 - 💬 **Persistent Memory** - Context-aware conversations across sessions
 - ⚡ **MCP Integration** - Secure tool-based access to databases and APIs
 
@@ -50,7 +49,7 @@ An intelligent inventory management system using Claude AI and Model Context Pro
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/vertex.git
+git clone https://github.com/SukhuChiku/vertexAI
 cd vertex
 ```
 
@@ -225,6 +224,18 @@ Check that:
 2. `.env` file exists in `agent-service/`
 3. `ANTHROPIC_API_KEY` is set correctly
 4. No other service is using port 4000
+
+## Security Note
+
+⚠️ **For Production Use:**
+
+The default database password (`your_vertex_password`) is suitable for local development only. 
+
+For production deployments:
+1. Change the database password in PostgreSQL
+2. Set `DB_PASSWORD` in your `.env` file
+3. Never expose PostgreSQL port 5432 to the internet
+4. Use strong, unique passwords
 
 ## Future Enhancements
 
