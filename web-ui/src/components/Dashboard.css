@@ -1,0 +1,108 @@
+.dashboard {
+  height: 100%;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+}
+
+.dashboard h2 {
+  color: #111827;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+}
+
+.dashboard-card h3 {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.big-number {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  line-height: 1;
+}
+
+.big-number.warning {
+  color: #fbbf24;
+}
+
+.big-number.critical {
+  color: #fca5a5;
+}
+
+.big-number.success {
+  color: #86efac;
+}
+
+.dashboard-card .subtitle {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.info-section {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-section h3 {
+  color: #111827;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-section li {
+  padding: 0.5rem 0;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.info-section li strong {
+  color: #111827;
+}
+
+.info-section .note {
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 0;
+  color: #1e3a8a;
+  line-height: 1.6;
+}
+
+.info-section .note strong {
+  color: #1e40af;
+}
