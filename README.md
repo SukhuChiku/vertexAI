@@ -1,4 +1,4 @@
-# Vertex - AI-Powered Supply Chain Risk Agent
+# vertexAI - Supply Chain Risk Agent
 
 An intelligent inventory management system using Claude AI and Model Context Protocol (MCP) to automate supply chain monitoring for mechanical manufacturing.
 
