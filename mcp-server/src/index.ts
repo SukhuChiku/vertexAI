@@ -1,4 +1,30 @@
 #!/usr/bin/env node
+import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// CRITICAL: Load MCP server's own .env, overriding parent process
+// This is necessary because agent-service spawns MCP as child process
+dotenv.config({ 
+  path: path.resolve(__dirname, '../../.env'),
+  override: true  // Override inherited env vars
+});
+
+console.error('🔍 MCP Server environment:');
+console.error('   DB_NAME from .env:', process.env.DB_NAME);
+console.error('   Should be: vertex_inventory');
+
+// Verify we're using the right database
+if (process.env.DB_NAME !== 'vertex_inventory') {
+  console.error('⚠️  WARNING: MCP Server is not using vertex_inventory!');
+  console.error('   Current DB_NAME:', process.env.DB_NAME);
+  // Force it
+  process.env.DB_NAME = 'vertex_inventory';
+  console.error('   Forced to: vertex_inventory');
+}
 
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';

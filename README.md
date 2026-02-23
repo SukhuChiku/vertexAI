@@ -76,7 +76,7 @@ cp web-ui/.env.example web-ui/.env
 **Required environment variables:**
 
 - `ANTHROPIC_API_KEY` - Get from [Anthropic Console](https://console.anthropic.com/)
-- `DB_PASSWORD` - PostgreSQL password (default: `vertex_password`)
+- `DB_PASSWORD` - PostgreSQL password (default: `your_vertex_password`)
 
 ### 4. Start PostgreSQL
 ```bash

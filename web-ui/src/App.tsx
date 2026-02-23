@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ChatWindow from './components/ChatWindow';
 import AlertPanel from './components/AlertPanel';
-import Dashboard from './components/Dashboard';
+// import Dashboard from './components/Dashboard';
 import './App.css';
 
 function App() {
